@@ -1,33 +1,72 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 </head>
+
 <body>
 
-<h1>Pomodoro Timer</h1>
+    <h1>Pomodoro Timer</h1>
 
-<h3>Task Time: <span id="taskTime"></span></h3>
-<h3>Break Time: <span id="breakTime"></span></h3>
+    <h3>Task Time: <span id="taskTime"></span></h3>
+    <h3>Break Time: <span id="breakTime"></span></h3>
 
-<div id="controls"></div>
+    <div id="controls"></div>
 
-<script type="text/javascript">
+    <script type="text/javascript">
+        /*
+         * GLOBALS
+         */
 
-    var defaultTaskTime = 25000, //default 25 seconds
-    defaultBreakTime = 5000, //default 5 seconds
-    deltaTaskTime = 5000,
-    deltaBreakTime = 1000,
-    loopFrequencyInMilliseconds = 10, //loop fires every 10 milliseconds
+        var defaultTaskTime = 25000, //default 25 seconds
+            defaultBreakTime = 5000, //default 5 seconds
+            deltaTaskTime = 5000,
+            deltaBreakTime = 1000,
+            loopFrequencyInMilliseconds = 10, //loop fires every 10 milliseconds
 
-    taskTime,
-    breakTime,
-    isTimerRunning,
-    lastLoopSystemTime,
+            taskTime,
+            breakTime,
+            isTimerRunning,
+            lastLoopSystemTime,
 
-    taskTimeDisplay,
-    breakTimeDisplay,
-    controlsDisplay;
+            taskTimeDisplay,
+            breakTimeDisplay,
+            controlsDisplay;
 
-</script>
+
+        /*
+         * MODEL
+         */
+
+
+
+        /*
+         * VIEW
+         */
+
+
+        /*
+         * CONTROLLER
+         */
+
+
+
+        /*
+         * RUNTIME
+         */
+
+        //The DOMContentLoaded event is fired when the document has been completely loaded and parsed, without waiting for   
+        //stylesheets, images, and subframes to finish loading
+        document.addEventListener("DOMContentLoaded", function (event) {
+            //set DOM variables to help with processing time - reference a variable (here) instead of finding
+            // elementByID every time (in displayControls and displayTime - VIEW).
+            taskTimeDisplay = document.getElementById("taskTime");
+            breakTimeDisplay = document.getElementById("breakTime");
+            controlsDisplay = document.getElementById("controls");
+
+            modelInit(); //starting point of app
+        });
+    </script>
 </body>
+
 </html>
