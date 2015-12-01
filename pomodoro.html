@@ -13,6 +13,20 @@
 
 <script type="text/javascript">
 
+    var defaultTaskTime = 25000, //default 25 seconds
+    defaultBreakTime = 5000, //default 5 seconds
+    deltaTaskTime = 5000,
+    deltaBreakTime = 1000,
+    loopFrequencyInMilliseconds = 10, //loop fires every 10 milliseconds
+
+    taskTime,
+    breakTime,
+    isTimerRunning,
+    lastLoopSystemTime,
+
+    taskTimeDisplay,
+    breakTimeDisplay,
+    controlsDisplay;
 
 </script>
 </body>
